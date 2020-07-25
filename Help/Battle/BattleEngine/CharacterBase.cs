@@ -7,7 +7,7 @@ using Magic;
 
 
 
-namespace Character
+namespace Party
 {
     public abstract class CharacterBase
     {
@@ -17,12 +17,12 @@ namespace Character
         public int Health { get; set; }
         public int Level { get; set; }
         public Move BasicAttack { get; set; }
-        public Character()
+        public CharacterBase()
         {
             actionList = new List<string>();
             magicList = new List<Move>();
         }
-        public Character(int atk, int def, int currentHealth, int health, int lvl)
+        public CharacterBase(int atk, int def, int currentHealth, int health, int lvl)
         {
             Attack = atk;
             Defense = def;
@@ -40,7 +40,6 @@ namespace Character
             return CurrentHealth;
         }
     }
-
 
     public class Player : CharacterBase
     {
@@ -61,14 +60,6 @@ namespace Character
         }
         //
     }
-    public class Enemy : CharacterBase
-    {
-        public Enemy()
-        {
-            BasicAttack = new Move("wopck", Attack, 30);
-        }
-    }
-
     public class Move
     {
         public string Name { get; set; }
@@ -78,19 +69,6 @@ namespace Character
             Name = moveName;
             //balance Damage later - 6/23/2020
             Power = power;
-        }
-    }
-}
-
-namespace GameModel {
-    [Serializable]
-    public class Party { 
-        public List<Character.Player> Characters { get; set; }
-
-
-        public bool Save(string filename) {
-            string data = JsonConvert.SerializeObject(this);
-
         }
     }
 }
