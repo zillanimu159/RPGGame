@@ -65,16 +65,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Battle\Battle.cs" />
-    <Compile Include="Battle\BattleEngine\Change.cs" />
-    <Compile Include="Party\Character\CharacterBase.cs" />
-    <Compile Include="Party\Actions\Move.cs" />
-    <Compile Include="Party\Character\Player.cs" />
     <Compile Include="Assets\Scripts\Battle\InfoForUI.cs" />
-    <Compile Include="Party\Actions\Magic.cs" />
     <Compile Include="Assets\Scripts\Battle\PartyCharUIManager.cs" />
     <Compile Include="Assets\Scripts\World\Movement.cs" />
+    <Compile Include="Battle\BattleEngine\Change.cs" />
+    <Compile Include="Party\Actions\ActionBase.cs" />
+    <Compile Include="Party\Actions\BuffMove.cs" />
+    <Compile Include="Party\Actions\HealingMove.cs" />
+    <Compile Include="Party\Actions\Item.cs" />
+    <Compile Include="Party\Actions\Move.cs" />
+    <Compile Include="Party\Member\Character.cs" />
+    <Compile Include="Party\Actions\DamageMove.cs" />
+    <Compile Include="Party\Member\CombatStat.cs" />
+    <Compile Include="Party\Member\Profession.cs" />
     <Compile Include="Battle\BattleEngine\BattleEngine.cs" />
     <Compile Include="Party\CharacterParty.cs" />
+    <Compile Include="Party\Member\Resource.cs" />
+    <Compile Include="Party\Member\Statistic.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/willi/Downloads/gdc-game-1-master/Help/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -641,6 +648,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Scripts\Battle.meta" />
+    <None Include="Assets\Scripts\Battle\Battle.cs.meta" />
+    <None Include="Assets\Scripts\Battle\InfoForUI.cs.meta" />
+    <None Include="Assets\Scripts\Battle\PartyCharUIManager.cs.meta" />
+    <None Include="Assets\Scripts\World.meta" />
+    <None Include="Assets\Scripts\World\Movement.cs.meta" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

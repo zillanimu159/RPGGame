@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Party.Actions
 {
-    public class Move
+    public class Move : ActionBase
     {
         public string Name { get; set; }
-        public int Stat { get; set; }
-        public int Power { get; set; }
-        public Move(string moveName, int stat, int power)
-        {
-            Name = moveName;
-            Stat = stat;
-            Power = power;
-        }
+        public string StatInvolved { get; set; }
+        public enum Targets { SINGLE, PARTY }
+        public Targets Targeted { get; set; }
+        public enum MoveType { DAMAGE, HEALING, STATUS }
+        public MoveType Type { get; set; }
+        //public enum resource
+        //public resource resource
+        public int Cost { get; set; }
+        //public bool AOE;
     }
 }
